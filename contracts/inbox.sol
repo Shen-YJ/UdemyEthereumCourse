@@ -6,14 +6,8 @@ contract Inbox {
         message = initialMessage;
     }
 
-    function setMessage(string newMessage) public payable{
-        // require(msg.value >= 10000000000000000);
+    function setMessage(string newMessage) public {
         message = newMessage;
     }
     
-    function checkMessage() public view returns(string) {
-        return message;
-
-    }
-
 }
