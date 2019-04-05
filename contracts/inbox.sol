@@ -2,9 +2,8 @@ pragma solidity ~0.4.21;
 
 contract Inbox {
     string public message;
-    function Inbox(string initialMessage, int initialN) public {
+    function Inbox(string initialMessage) public {
         message = initialMessage;
-        testN = initialN;
     }
 
     function setMessage(string newMessage) public payable{
