@@ -1,0 +1,743 @@
+Contract {
+  currentProvider: [Getter/Setter
+    ],
+  _requestManager:
+   RequestManager {
+     provider:
+      b {
+        _events: [Object
+            ],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        options: [Object
+            ],
+        engine: [d
+            ],
+        manager: [u
+            ],
+        sendAsync: [Function: bound
+            ],
+        send: [Function: bound
+            ],
+        close: [Function: bound
+            ],
+        _queueRequest: [Function: bound
+            ],
+        _processRequestQueue: [Function: bound
+            ],
+        _requestQueue: [],
+        _requestInProgress: false
+        },
+     providers: { WebsocketProvider: [Function: WebsocketProvider
+            ],
+        HttpProvider: [Function: HttpProvider
+            ],
+        IpcProvider: [Function: IpcProvider
+            ]
+        },
+     subscriptions: {}
+    },
+  givenProvider: null,
+  providers: { WebsocketProvider: [Function: WebsocketProvider
+        ],
+     HttpProvider: [Function: HttpProvider
+        ],
+     IpcProvider: [Function: IpcProvider
+        ]
+    },
+  _provider:
+   b {
+     _events: [Object: null prototype
+        ] { data: [Array
+            ]
+        },
+     _eventsCount: 1,
+     _maxListeners: undefined,
+     options: { vmErrorsOnRPCResponse: true,
+        verbose: false,
+        asyncRequestProcessing: false,
+        logger: [Object
+            ],
+        seed: '0Iq2XGfW3u',
+        mnemonic:
+         'uncle essence inner shrimp antenna grace blood humble ritual crazy unknown offer',
+        network_id: 1554543248694,
+        total_accounts: 10,
+        gasPrice: '0x77359400',
+        default_balance_ether: 100,
+        unlocked_accounts: [],
+        hdPath: 'm/44\'/60\'/0\'/0/',
+        gasLimit: '0x6691b7',
+        defaultTransactionGasLimit: '0x15f90',
+        time: null,
+        debug: false,
+        hardfork: 'petersburg',
+        allowUnlimitedContractSize: false
+        },
+     engine:
+      d {
+        _events: [Object
+            ],
+        _eventsCount: 1,
+        _maxListeners: 100,
+        _blockTracker: [i
+            ],
+        _ready: [i
+            ],
+        currentBlock: [Object
+            ],
+        _providers: [Array
+            ],
+        manager: [u
+            ]
+        },
+     manager:
+      u {
+        state: [w
+            ],
+        options: [Object
+            ],
+        initialized: true,
+        initialization_error: null,
+        post_initialization_callbacks: [],
+        engine: [d
+            ],
+        currentBlock: [Object
+            ]
+        },
+     sendAsync: [Function: bound
+        ],
+     send: [Function: bound
+        ],
+     close: [Function: bound
+        ],
+     _queueRequest: [Function: bound
+        ],
+     _processRequestQueue: [Function: bound
+        ],
+     _requestQueue: [],
+     _requestInProgress: false
+    },
+  setProvider: [Function
+    ],
+  BatchRequest: [Function: bound Batch
+    ],
+  extend: {
+        [Function: ex
+        ]
+     formatters: { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter
+            ],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter
+            ],
+        inputCallFormatter: [Function: inputCallFormatter
+            ],
+        inputTransactionFormatter: [Function: inputTransactionFormatter
+            ],
+        inputAddressFormatter: [Function: inputAddressFormatter
+            ],
+        inputPostFormatter: [Function: inputPostFormatter
+            ],
+        inputLogFormatter: [Function: inputLogFormatter
+            ],
+        inputSignFormatter: [Function: inputSignFormatter
+            ],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter
+            ],
+        outputTransactionFormatter: [Function: outputTransactionFormatter
+            ],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter
+            ],
+        outputBlockFormatter: [Function: outputBlockFormatter
+            ],
+        outputLogFormatter: [Function: outputLogFormatter
+            ],
+        outputPostFormatter: [Function: outputPostFormatter
+            ],
+        outputSyncingFormatter: [Function: outputSyncingFormatter
+            ]
+        },
+     utils: { _fireError: [Function: _fireError
+            ],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString
+            ],
+        randomHex: [Function: randomHex
+            ],
+        _: [Function
+            ],
+        BN: [Function
+            ],
+        isBN: [Function: isBN
+            ],
+        isBigNumber: [Function: isBigNumber
+            ],
+        isHex: [Function: isHex
+            ],
+        isHexStrict: [Function: isHexStrict
+            ],
+        sha3: [Function
+            ],
+        keccak256: [Function
+            ],
+        soliditySha3: [Function: soliditySha3
+            ],
+        isAddress: [Function: isAddress
+            ],
+        checkAddressChecksum: [Function: checkAddressChecksum
+            ],
+        toChecksumAddress: [Function: toChecksumAddress
+            ],
+        toHex: [Function: toHex
+            ],
+        toBN: [Function: toBN
+            ],
+        bytesToHex: [Function: bytesToHex
+            ],
+        hexToBytes: [Function: hexToBytes
+            ],
+        hexToNumberString: [Function: hexToNumberString
+            ],
+        hexToNumber: [Function: hexToNumber
+            ],
+        toDecimal: [Function: hexToNumber
+            ],
+        numberToHex: [Function: numberToHex
+            ],
+        fromDecimal: [Function: numberToHex
+            ],
+        hexToUtf8: [Function: hexToUtf8
+            ],
+        hexToString: [Function: hexToUtf8
+            ],
+        toUtf8: [Function: hexToUtf8
+            ],
+        utf8ToHex: [Function: utf8ToHex
+            ],
+        stringToHex: [Function: utf8ToHex
+            ],
+        fromUtf8: [Function: utf8ToHex
+            ],
+        hexToAscii: [Function: hexToAscii
+            ],
+        toAscii: [Function: hexToAscii
+            ],
+        asciiToHex: [Function: asciiToHex
+            ],
+        fromAscii: [Function: asciiToHex
+            ],
+        unitMap: [Object
+            ],
+        toWei: [Function: toWei
+            ],
+        fromWei: [Function: fromWei
+            ],
+        padLeft: [Function: leftPad
+            ],
+        leftPad: [Function: leftPad
+            ],
+        padRight: [Function: rightPad
+            ],
+        rightPad: [Function: rightPad
+            ],
+        toTwosComplement: [Function: toTwosComplement
+            ]
+        },
+     Method: [Function: Method
+        ]
+    },
+  clearSubscriptions: [Function
+    ],
+  options: { address: [Getter/Setter
+        ],
+     jsonInterface: [Getter/Setter
+        ],
+     data: undefined,
+     from: undefined,
+     gasPrice: undefined,
+     gas: undefined
+    },
+  defaultAccount: [Getter/Setter
+    ],
+  defaultBlock: [Getter/Setter
+    ],
+  methods: { checkBlance: [Function: bound _createTxObject
+        ],
+     '0x2a7cc41f': [Function: bound _createTxObject
+        ],
+     'checkBlance()': [Function: bound _createTxObject
+        ],
+     manager: [Function: bound _createTxObject
+        ],
+     '0x481c6a75': [Function: bound _createTxObject
+        ],
+     'manager()': [Function: bound _createTxObject
+        ],
+     pickWinner: [Function: bound _createTxObject
+        ],
+     '0x5d495aea': [Function: bound _createTxObject
+        ],
+     'pickWinner()': [Function: bound _createTxObject
+        ],
+     getPlayers: [Function: bound _createTxObject
+        ],
+     '0x8b5b9ccc': [Function: bound _createTxObject
+        ],
+     'getPlayers()': [Function: bound _createTxObject
+        ],
+     enter: [Function: bound _createTxObject
+        ],
+     '0xe97dcb62': [Function: bound _createTxObject
+        ],
+     'enter()': [Function: bound _createTxObject
+        ],
+     players: [Function: bound _createTxObject
+        ],
+     '0xf71d96cb': [Function: bound _createTxObject
+        ],
+     'players(uint256)': [Function: bound _createTxObject
+        ]
+    },
+  events: { allEvents: [Function: bound
+        ]
+    },
+  _address: '0x4016A14B81DaB78DB2CA3ED82F55DF60CDD2eD3b',
+  _jsonInterface: [
+        { constant: true,
+       inputs: [],
+       name: 'checkBlance',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0x2a7cc41f'
+        },
+        { constant: true,
+       inputs: [],
+       name: 'manager',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0x481c6a75'
+        },
+        { constant: false,
+       inputs: [],
+       name: 'pickWinner',
+       outputs: [],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'function',
+       signature: '0x5d495aea'
+        },
+        { constant: true,
+       inputs: [],
+       name: 'getPlayers',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0x8b5b9ccc'
+        },
+        { constant: false,
+       inputs: [],
+       name: 'enter',
+       outputs: [],
+       payable: true,
+       stateMutability: 'payable',
+       type: 'function',
+       signature: '0xe97dcb62'
+        },
+        { constant: true,
+       inputs: [Array
+            ],
+       name: 'players',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0xf71d96cb'
+        },
+        { inputs: [],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'constructor',
+       constant: undefined,
+       signature: 'constructor'
+        }
+    ]
+}
+    √ only manager can call pickWinner (43ms)
+Contract {
+  currentProvider: [Getter/Setter
+    ],
+  _requestManager:
+   RequestManager {
+     provider:
+      b {
+        _events: [Object
+            ],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        options: [Object
+            ],
+        engine: [d
+            ],
+        manager: [u
+            ],
+        sendAsync: [Function: bound
+            ],
+        send: [Function: bound
+            ],
+        close: [Function: bound
+            ],
+        _queueRequest: [Function: bound
+            ],
+        _processRequestQueue: [Function: bound
+            ],
+        _requestQueue: [],
+        _requestInProgress: false
+        },
+     providers: { WebsocketProvider: [Function: WebsocketProvider
+            ],
+        HttpProvider: [Function: HttpProvider
+            ],
+        IpcProvider: [Function: IpcProvider
+            ]
+        },
+     subscriptions: {}
+    },
+  givenProvider: null,
+  providers: { WebsocketProvider: [Function: WebsocketProvider
+        ],
+     HttpProvider: [Function: HttpProvider
+        ],
+     IpcProvider: [Function: IpcProvider
+        ]
+    },
+  _provider:
+   b {
+     _events: [Object: null prototype
+        ] { data: [Array
+            ]
+        },
+     _eventsCount: 1,
+     _maxListeners: undefined,
+     options: { vmErrorsOnRPCResponse: true,
+        verbose: false,
+        asyncRequestProcessing: false,
+        logger: [Object
+            ],
+        seed: '0Iq2XGfW3u',
+        mnemonic:
+         'uncle essence inner shrimp antenna grace blood humble ritual crazy unknown offer',
+        network_id: 1554543248694,
+        total_accounts: 10,
+        gasPrice: '0x77359400',
+        default_balance_ether: 100,
+        unlocked_accounts: [],
+        hdPath: 'm/44\'/60\'/0\'/0/',
+        gasLimit: '0x6691b7',
+        defaultTransactionGasLimit: '0x15f90',
+        time: null,
+        debug: false,
+        hardfork: 'petersburg',
+        allowUnlimitedContractSize: false
+        },
+     engine:
+      d {
+        _events: [Object
+            ],
+        _eventsCount: 1,
+        _maxListeners: 100,
+        _blockTracker: [i
+            ],
+        _ready: [i
+            ],
+        currentBlock: [Object
+            ],
+        _providers: [Array
+            ],
+        manager: [u
+            ]
+        },
+     manager:
+      u {
+        state: [w
+            ],
+        options: [Object
+            ],
+        initialized: true,
+        initialization_error: null,
+        post_initialization_callbacks: [],
+        engine: [d
+            ],
+        currentBlock: [Object
+            ]
+        },
+     sendAsync: [Function: bound
+        ],
+     send: [Function: bound
+        ],
+     close: [Function: bound
+        ],
+     _queueRequest: [Function: bound
+        ],
+     _processRequestQueue: [Function: bound
+        ],
+     _requestQueue: [],
+     _requestInProgress: false
+    },
+  setProvider: [Function
+    ],
+  BatchRequest: [Function: bound Batch
+    ],
+  extend: {
+        [Function: ex
+        ]
+     formatters: { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter
+            ],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter
+            ],
+        inputCallFormatter: [Function: inputCallFormatter
+            ],
+        inputTransactionFormatter: [Function: inputTransactionFormatter
+            ],
+        inputAddressFormatter: [Function: inputAddressFormatter
+            ],
+        inputPostFormatter: [Function: inputPostFormatter
+            ],
+        inputLogFormatter: [Function: inputLogFormatter
+            ],
+        inputSignFormatter: [Function: inputSignFormatter
+            ],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter
+            ],
+        outputTransactionFormatter: [Function: outputTransactionFormatter
+            ],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter
+            ],
+        outputBlockFormatter: [Function: outputBlockFormatter
+            ],
+        outputLogFormatter: [Function: outputLogFormatter
+            ],
+        outputPostFormatter: [Function: outputPostFormatter
+            ],
+        outputSyncingFormatter: [Function: outputSyncingFormatter
+            ]
+        },
+     utils: { _fireError: [Function: _fireError
+            ],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString
+            ],
+        randomHex: [Function: randomHex
+            ],
+        _: [Function
+            ],
+        BN: [Function
+            ],
+        isBN: [Function: isBN
+            ],
+        isBigNumber: [Function: isBigNumber
+            ],
+        isHex: [Function: isHex
+            ],
+        isHexStrict: [Function: isHexStrict
+            ],
+        sha3: [Function
+            ],
+        keccak256: [Function
+            ],
+        soliditySha3: [Function: soliditySha3
+            ],
+        isAddress: [Function: isAddress
+            ],
+        checkAddressChecksum: [Function: checkAddressChecksum
+            ],
+        toChecksumAddress: [Function: toChecksumAddress
+            ],
+        toHex: [Function: toHex
+            ],
+        toBN: [Function: toBN
+            ],
+        bytesToHex: [Function: bytesToHex
+            ],
+        hexToBytes: [Function: hexToBytes
+            ],
+        hexToNumberString: [Function: hexToNumberString
+            ],
+        hexToNumber: [Function: hexToNumber
+            ],
+        toDecimal: [Function: hexToNumber
+            ],
+        numberToHex: [Function: numberToHex
+            ],
+        fromDecimal: [Function: numberToHex
+            ],
+        hexToUtf8: [Function: hexToUtf8
+            ],
+        hexToString: [Function: hexToUtf8
+            ],
+        toUtf8: [Function: hexToUtf8
+            ],
+        utf8ToHex: [Function: utf8ToHex
+            ],
+        stringToHex: [Function: utf8ToHex
+            ],
+        fromUtf8: [Function: utf8ToHex
+            ],
+        hexToAscii: [Function: hexToAscii
+            ],
+        toAscii: [Function: hexToAscii
+            ],
+        asciiToHex: [Function: asciiToHex
+            ],
+        fromAscii: [Function: asciiToHex
+            ],
+        unitMap: [Object
+            ],
+        toWei: [Function: toWei
+            ],
+        fromWei: [Function: fromWei
+            ],
+        padLeft: [Function: leftPad
+            ],
+        leftPad: [Function: leftPad
+            ],
+        padRight: [Function: rightPad
+            ],
+        rightPad: [Function: rightPad
+            ],
+        toTwosComplement: [Function: toTwosComplement
+            ]
+        },
+     Method: [Function: Method
+        ]
+    },
+  clearSubscriptions: [Function
+    ],
+  options: { address: [Getter/Setter
+        ],
+     jsonInterface: [Getter/Setter
+        ],
+     data: undefined,
+     from: undefined,
+     gasPrice: undefined,
+     gas: undefined
+    },
+  defaultAccount: [Getter/Setter
+    ],
+  defaultBlock: [Getter/Setter
+    ],
+  methods: { checkBlance: [Function: bound _createTxObject
+        ],
+     '0x2a7cc41f': [Function: bound _createTxObject
+        ],
+     'checkBlance()': [Function: bound _createTxObject
+        ],
+     manager: [Function: bound _createTxObject
+        ],
+     '0x481c6a75': [Function: bound _createTxObject
+        ],
+     'manager()': [Function: bound _createTxObject
+        ],
+     pickWinner: [Function: bound _createTxObject
+        ],
+     '0x5d495aea': [Function: bound _createTxObject
+        ],
+     'pickWinner()': [Function: bound _createTxObject
+        ],
+     getPlayers: [Function: bound _createTxObject
+        ],
+     '0x8b5b9ccc': [Function: bound _createTxObject
+        ],
+     'getPlayers()': [Function: bound _createTxObject
+        ],
+     enter: [Function: bound _createTxObject
+        ],
+     '0xe97dcb62': [Function: bound _createTxObject
+        ],
+     'enter()': [Function: bound _createTxObject
+        ],
+     players: [Function: bound _createTxObject
+        ],
+     '0xf71d96cb': [Function: bound _createTxObject
+        ],
+     'players(uint256)': [Function: bound _createTxObject
+        ]
+    },
+  events: { allEvents: [Function: bound
+        ]
+    },
+  _address: '0x0e8Ac830F1A9Ad43ECfE289634f1dEdC505B3AD3',
+  _jsonInterface: [
+        { constant: true,
+       inputs: [],
+       name: 'checkBlance',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0x2a7cc41f'
+        },
+        { constant: true,
+       inputs: [],
+       name: 'manager',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0x481c6a75'
+        },
+        { constant: false,
+       inputs: [],
+       name: 'pickWinner',
+       outputs: [],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'function',
+       signature: '0x5d495aea'
+        },
+        { constant: true,
+       inputs: [],
+       name: 'getPlayers',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0x8b5b9ccc'
+        },
+        { constant: false,
+       inputs: [],
+       name: 'enter',
+       outputs: [],
+       payable: true,
+       stateMutability: 'payable',
+       type: 'function',
+       signature: '0xe97dcb62'
+        },
+        { constant: true,
+       inputs: [Array
+            ],
+       name: 'players',
+       outputs: [Array
+            ],
+       payable: false,
+       stateMutability: 'view',
+       type: 'function',
+       signature: '0xf71d96cb'
+        },
+        { inputs: [],
+       payable: false,
+       stateMutability: 'nonpayable',
+       type: 'constructor',
+       constant: undefined,
+       signature: 'constructor'
+        }
+    ]
+}
