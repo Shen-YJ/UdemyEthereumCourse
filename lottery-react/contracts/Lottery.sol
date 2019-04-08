@@ -3,7 +3,6 @@ pragma solidity ~0.4.25;
 contract Lottery {
     address public manager;
     address[] public players;
-    address winner;
     
     modifier restricted(){
         require(msg.sender == manager);
@@ -24,12 +23,10 @@ contract Lottery {
             abi.encodePacked(
                 msg.sender, now, players)));
     }
-
-
     
     
     function pickWinner() public restricted{
-        winner = players[random()%players.length];
+        address winner = players[random()%players.length];
         winner.transfer(address(this).balance);
         players = new address[](0);
     }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import web3 from './web3';
 import lottery from './lottery';
 
 class App extends Component {
+
   state = {
     manager: '',
     players: [],
@@ -12,6 +13,7 @@ class App extends Component {
     value: '',
     message: '',
   }
+
   async componentDidMount() {
     const manager = await lottery.methods.manager().call();
     const players = await lottery.methods.getPlayers().call();
@@ -19,8 +21,7 @@ class App extends Component {
     this.setState({ manager, players, balance });
   }
 
-
-  async componentDidUpdate(){
+  async componentDidUpdate() {
     // const manager = await lottery.methods.manager().call();
     const players = await lottery.methods.getPlayers().call();
     const balance = await web3.eth.getBalance(lottery.options.address);
@@ -28,7 +29,7 @@ class App extends Component {
   }
 
   onSubmit = async (event) => {
-    event.preventDefault();//需要了解清楚
+    event.preventDefault();//待了解清楚
     const account = web3.currentProvider.selectedAddress;
     this.setState({ message: 'Waiting on transaction dealing ...' })
     // 需要一个过渡动画
@@ -40,15 +41,15 @@ class App extends Component {
     this.setState({ message: 'You have been entered' });
   }
 
-  onClick = async()=>{
+  onClick = async () => {
     const account = web3.currentProvider.selectedAddress;
-    this.setState({message: 'Waiting on transaction dealing...'});
-    
+    this.setState({ message: 'Waiting on transaction dealing...' });
+
     await lottery.methods.pickWinner().send({
       from: account
     });
 
-    this.setState({message: 'A winner has been picked!'});
+    this.setState({ message: 'A winner has been picked!' });
 
   }
 
@@ -62,7 +63,7 @@ class App extends Component {
           <br></br>
           <ul>Player list : {this.state.players.map(
             (player) => {
-              return(
+              return (
                 <li>{player}</li>
               )
             }

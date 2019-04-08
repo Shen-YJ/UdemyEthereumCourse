@@ -18,11 +18,7 @@ const deploy = async ()=>{
         .deploy({ data: bytecode })
         .send({ from: accounts[0], gas: '1000000' });
 
-    console.log(accounts[0]);
-    
-
     console.log(interface);
     console.log('contract deployed to', result.options.address);
 };
 deploy();
-export default new web3.eth.Contract(abi, address);
